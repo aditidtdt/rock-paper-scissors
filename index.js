@@ -1,7 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
 function playRound() {
   // player's move
   let playerMove;
