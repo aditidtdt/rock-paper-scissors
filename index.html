@@ -4,8 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <script src="./index.js" rel="script"></script>
+    <div class="main">
+      <h1>Rock Paper Scissors</h1>
+      <div class="moves">
+        <button
+          class="move-buttons"
+          onclick="
+        playGame('rock');
+        "
+        >
+          <img
+            class="move-css"
+            src="./assets/rock.png"
+            alt="playing rock move"
+          />
+        </button>
+
+        <button
+          class="move-buttons"
+          onclick="
+        playGame('paper');
+        "
+        >
+          <img
+            class="move-css"
+            src="./assets/paper.png"
+            alt="playing paper move"
+          />
+        </button>
+
+        <button
+          class="move-buttons"
+          onclick="
+        playGame('scissors');
+        "
+        >
+          <img
+            class="move-css"
+            src="./assets/scissors.png"
+            alt="playing scissors move"
+          />
+        </button>
+      </div>
+      <div class="result">
+        <p class="js-moves"></p>
+        <p class="js-result"></p>
+      </div>
+
+      <div class="score-css">
+        <p class="scoreHead">SCORE</p>
+        <p class="js-score"></p>
+        <button
+          onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScore();
+        "
+          class="reset-css"
+        >
+          Reset Score
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
